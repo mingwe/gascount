@@ -1,15 +1,14 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
-// import './App.css';
+import { Link } from 'react-router-dom'
 
 class Nav extends Component {
     render() {
         return (
             <div>
                 <ul>
-                    <li>main</li>
-                    <li>add event</li>
-                    <li><s>login</s></li>
+                    <li><Link to='/'>main</Link></li>
+                    <li><Link to='/addevent'>add event</Link></li>
+                    <li><Link to='/login'>login</Link></li>
                 </ul>
             </div>
         );
