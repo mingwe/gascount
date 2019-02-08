@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
+import * as axios from "axios";
 
 class Addevent extends Component {
+
+    // postEvent(data) {
+    //
+    //     let getParams = '?test=true';
+    //
+    //     axios.get(`//localhost/fuel/setevent.php`+getParams)
+    //         .then(res => {
+    //             const events = res.data;
+    //             this.setState({ events });
+    //         })
+    // }
+
 
     render() {
         return (
