@@ -1,0 +1,13 @@
+main
+
+addevent
+
+history
+
+0.1 - only 1 user hist back,db,and front, add stolb with id (0 for root)
+
+0.2 - add table for many users
+
+login
+
+0.2 - add register/login with db table
