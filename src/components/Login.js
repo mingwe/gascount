@@ -1,9 +1,6 @@
 import React, { Component } from 'react';
 
-class Login extends Component {
-
-    render() {
-        return (
+const Login = () => (
             <div>
                 <form action={'login'} className={'form-vertical'}>
                     <h3>log in</h3>
@@ -19,7 +16,4 @@ class Login extends Component {
                 </form>
             </div>
         );
-    }
-}
-
 export default Login;

@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import './App.css';
+import '../App.css';
 import Nav from './Nav.js';
 import Mainview from './Mainview.js';
 import Addevent from './Addevent';
-import RefuelHistory from './RefuelHistory';
+// import RefuelHistory from './RefuelHistory';
+import EventsList from '../containers/mileageevents-list';
+import Details from '../containers/mileageevents-active-details';
 import Login from './Login';
 import { Router, Route } from 'react-router-dom';
 import * as axios  from 'axios';
@@ -30,11 +32,8 @@ class App extends Component {
         <Nav events={this.state.events}/>
         <Route exact path={'/'} component={Mainview}/>
         <Route path={'/addevent'} component={Addevent}/>
-        {/*<Route path={'/history'} component={RefuelHistory}/>*/}
-        <Route
-              path='/history'
-              render={(props) => <RefuelHistory events={this.state.events} />}
-        />
+        <Route path={'/history'} component={EventsList}/>
+        <Route path={'/history'} component={Details}/>
         <Route path={'/login'} component={Login}/>
       </div>
     );
