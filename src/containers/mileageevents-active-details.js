@@ -12,6 +12,7 @@ class Details extends Component {
                 <h4>Date: {this.props.event.date}</h4>
                 <h4>Liters filled: {this.props.event.ltrs}</h4>
                 <h4>Moment mileage: {this.props.event.mileage}</h4>
+                <h4>{this.props.event.isfull ? 'Full tank' : 'Not full'}</h4>
                 {this.props.event.comment ? <code>Comment: {this.props.event.comment}</code> : false}
             </div>
         )

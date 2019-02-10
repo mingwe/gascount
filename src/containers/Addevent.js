@@ -5,24 +5,52 @@ import {add} from '../actions';
 
 class Addevent extends Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+           form: {}
+        };
+    }
+
+    handleChange = e => {
+        const { name, value } = e.target;
+
+        this.setState( prevState => ({
+            form: {
+                ...prevState.form,
+                [name]: value,
+            }
+        }));
+    };
+    handleSubmit(event) {
+        console.log(event);
+        event.preventDefault();
+        this.props.add(this.state.form);
+    }
+
     render() {
         return (
             <div>
-                <form action={''} className={'form-vertical'}>
+                <form className={'form-vertical'} onSubmit={ this.handleSubmit.bind(this) }>
                     <h3>new event</h3>
                     <p>
-                        <label>millage</label><br/>
-                        <input type="number" id={'millage'} className={'form-control'} required/>
+                        <label>Mileage</label><br/>
+                        <input onChange={this.handleChange} type="number" name={'mileage'} id={'mileage'} className={'form-control'} required/>
                     </p>
                     <p>
-                        <label>date</label><br/>
-                        <input type="date" id={'eventdate'} className={'form-control'} required/>
+                        <label>Date
+                        </label><br/>
+                        <input onChange={this.handleChange} type="date" name={'date'} id={'date'} className={'form-control'} required/>
                     </p>
                     <p>
-                        <label>ltrs</label><br/>
-                        <input type="number" id={'liters'} className={'form-control'} required/>
+                        <label>Volume</label><br/>
+                        <input onChange={this.handleChange} type="number" name={'volume'} id={'volume'} className={'form-control'} required/>
                     </p>
-                    <p><input onClick={ () => this.props.add('777')} type="submit" className={'btn btn-primary'}/></p>
+                    <p>
+                        <label>Is full?</label><br/>
+                        <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} checked='1'/>
+                    </p>
+                     <p><input type="submit" className={'btn btn-primary'}/></p>
                 </form>
             </div>
         );

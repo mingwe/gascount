@@ -9,9 +9,9 @@ export default function (state=null, action) {
                 ...state,
                 {
                     ID: newID,
-                    mileage: '400',
-                    ltrs: '5',
-                    date: '112200',
+                    mileage: action.payload.mileage,
+                    ltrs: action.payload.volume,
+                    date: action.payload.date,
                     isfull: '0',
                     comment: '444'
                 },

@@ -15,7 +15,7 @@ class EventsList extends Component {
                     <td>{event.ltrs}</td>
                     <td>{event.date}</td>
                     <td><button onClick={() => this.props.select (event)}>details</button></td>
-                    <td><button onClick={() => this.props.remove (event.ID)}>details</button></td>
+                    <td><button onClick={() => this.props.remove (event.ID)}>remove</button></td>
                 </tr>
             )
         })
