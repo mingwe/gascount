@@ -11,3 +11,10 @@ export const add = (event)=> {
         payload: event
     }
 }
+
+export const remove = (event)=> {
+    return {
+        type: "EVENT_REMOVE",
+        payload: event
+    }
+}

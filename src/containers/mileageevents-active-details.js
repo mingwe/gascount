@@ -8,11 +8,11 @@ class Details extends Component {
         }
         return (
             <div>
-                <h2>Fuel event details:</h2>
-                <h3>Date: {this.props.event.date}</h3><br/>
-                <h3>Liters filled: {this.props.event.ltrs}</h3><br/>
-                <h3>Moment mileage: {this.props.event.mileage}</h3><br/>
-                {this.props.event.comment ? <blockqoute>Comment: {this.props.event.comment}</blockqoute> : false}
+                <h3>Fuel event details:</h3>
+                <h4>Date: {this.props.event.date}</h4>
+                <h4>Liters filled: {this.props.event.ltrs}</h4>
+                <h4>Moment mileage: {this.props.event.mileage}</h4>
+                {this.props.event.comment ? <code>Comment: {this.props.event.comment}</code> : false}
             </div>
         )
     }

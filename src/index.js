@@ -8,9 +8,10 @@ import { BrowserRouter } from 'react-router-dom';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 import allReducers from './reducers'
+import storeInitialState from './reducers/initialstate';
 
 
-const store = createStore(allReducers);
+const store = createStore(allReducers, {mileage: storeInitialState()});
 
 ReactDOM.render((
     <Provider store={store}>
