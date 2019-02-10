@@ -1,19 +1,9 @@
-import React, { Component } from 'react';
-import * as axios from "axios";
+import React, {Component} from 'react';
+import {bindActionCreators} from 'redux';
+import {connect} from 'react-redux';
+import {add} from '../actions';
 
 class Addevent extends Component {
-
-    // postEvent(data) {
-    //
-    //     let getParams = '?test=true';
-    //
-    //     axios.get(`//localhost/fuel/setevent.php`+getParams)
-    //         .then(res => {
-    //             const events = res.data;
-    //             this.setState({ events });
-    //         })
-    // }
-
 
     render() {
         return (
@@ -32,11 +22,23 @@ class Addevent extends Component {
                         <label>ltrs</label><br/>
                         <input type="number" id={'liters'} className={'form-control'} required/>
                     </p>
-                    <p><input type="submit" className={'btn btn-primary'}/></p>
+                    <p><input onClick={ () => this.props.add('777')} type="submit" className={'btn btn-primary'}/></p>
                 </form>
             </div>
         );
     }
 }
 
-export default Addevent;
+function mapStateToProps (state) {
+    return {
+        mileage: state.mileage
+    }
+}
+
+function matchDispatchToProps (dispatch) {
+    return bindActionCreators({
+        add: add
+    }, dispatch)
+}
+
+export default connect(mapStateToProps, matchDispatchToProps)(Addevent);

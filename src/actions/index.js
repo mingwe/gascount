@@ -4,3 +4,10 @@ export const select = (event)=> {
         payload: event
     }
 }
+
+export const add = (event)=> {
+    return {
+        type: "EVENT_ADD",
+        payload: event
+    }
+}
