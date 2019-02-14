@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import * as axios  from 'axios';
-import RefuelHistory from "./RefuelHistory";
 import {connect} from "react-redux";
 
 
@@ -56,7 +55,7 @@ class Mainview extends Component {
                 <p><small>Total mileage: {this.showTotalMileage()}</small></p>
                 <p>Total passed: {this.showPassedMileage()}</p>
                 <p>Total filled: {this.showTotalFilled()}</p>
-                <p><strong>Total consumption: {this.showConsumption()} liters per 100km</strong></p>
+                <p><strong>Total consumption: {this.showConsumption()} / 100</strong></p>
                 {/*<EventsList/>*/}
             </div>
         );
