@@ -2,7 +2,7 @@ export default function (state=null, action) {
 
     console.log(action);
     switch (action.type) {
-        case "EVENT_ADD":
+        case "EVENT_ADD_SUCCESS":
 
             let newID = (state.length) + 1;
             return [
@@ -18,6 +18,11 @@ export default function (state=null, action) {
             ]
 
             break;
+
+        case "EVENT_ADD_FAIL":
+            alert('failed to add event');
+            return state;
+
         case "EVENT_REMOVE":
 
             let removeID = action.payload;

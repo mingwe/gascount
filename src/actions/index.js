@@ -10,13 +10,6 @@ export const select = (event)=> {
     }
 }
 
-// export const add = (event)=> {
-//     return {
-//         type: "EVENT_ADD",
-//         payload: event
-//     }
-// }
-
 export const remove = (event)=> {
     return {
         type: "EVENT_REMOVE",
@@ -27,7 +20,14 @@ export const remove = (event)=> {
 
 export const addEventSuccess = (data) => {
     return {
-        type: "EVENT_ADD",
+        type: "EVENT_ADD_SUCCESS",
+        payload: data
+    }
+}
+
+export const addEventFail = (data) => {
+    return {
+        type: "EVENT_ADD_FAIL",
         payload: data
     }
 }
@@ -37,10 +37,9 @@ export const add = ( event ) => {
         return axios.post(`${apiUrl}/setevent.php`, event)
             .then(response => {
                 dispatch(addEventSuccess(response.data))
-                // dispatch(addEventSuccess(event))
-                // console.log(response.data);
             })
             .catch(error => {
+                dispatch(addEventFail(error));
                 throw(error);
             });
     };
