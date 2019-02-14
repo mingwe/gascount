@@ -34,7 +34,7 @@ class EventsList extends Component {
                         </tr>
                     </thead>
                     <tbody>
-                        {this.showList()}
+                    {this.props.mileage ? this.showList() : ''}
                     </tbody>
                 </table>
             </div>

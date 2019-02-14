@@ -2,6 +2,11 @@ export default function (state=null, action) {
 
     console.log(action);
     switch (action.type) {
+        case "LOAD_REMOTE_SUCCESS":
+
+            return action.payload
+            break;
+
         case "EVENT_ADD_SUCCESS":
 
             let newID = (state.length) + 1;

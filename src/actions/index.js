@@ -25,6 +25,13 @@ export const addEventSuccess = (data) => {
     }
 }
 
+export const loadRemoteMileageSuccess = (data) => {
+    return {
+        type: "LOAD_REMOTE_SUCCESS",
+        payload: data
+    }
+}
+
 export const addEventFail = (data) => {
     return {
         type: "EVENT_ADD_FAIL",
@@ -42,5 +49,18 @@ export const add = ( event ) => {
                 dispatch(addEventFail(error));
                 throw(error);
             });
+    };
+};
+
+export const loadRemoteMileage = ( ) => {
+    return (dispatch) => {
+        return axios.get(`${apiUrl}/getevent.php`)
+            .then(response => {
+                dispatch(loadRemoteMileageSuccess(response.data))
+            })
+            // .catch(error => {
+            //     dispatch(addEventFail(error));
+            //     throw(error);
+            // });
     };
 };
