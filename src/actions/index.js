@@ -59,7 +59,7 @@ export const loadRemoteMileage = ( ) => {
                 dispatch(loadRemoteMileageSuccess(response.data))
             })
             // .catch(error => {
-            //     dispatch(addEventFail(error));
+            //     dispatch(loadRemoteMileageFail(error));
             //     throw(error);
             // });
     };

@@ -1,21 +1,5 @@
 import React, { Component } from 'react';
-import * as axios  from 'axios';
 import {connect} from "react-redux";
-
-
-// export class EventsList extends Component {
-
-    // displayName: 'List of events';
-
-
-    // render() {
-    //     return (
-    //         {/*<div>*/}
-                {/*<RefuelHistory events={this.state.events}/>*/}
-            // </div>
-        // )
-    // }
-// }
 
 
 class Mainview extends Component {
@@ -56,7 +40,6 @@ class Mainview extends Component {
                 <p>Total passed: {this.showPassedMileage()}</p>
                 <p>Total filled: {this.showTotalFilled()}</p>
                 <p><strong>Total consumption: {this.showConsumption()} / 100</strong></p>
-                {/*<EventsList/>*/}
             </div>
         );
     }
@@ -67,7 +50,5 @@ function mapStateToProps (state) {
         mileage: state.mileage
     }
 }
-
-// export default Mainview;
 
 export default connect(mapStateToProps)(Mainview);
