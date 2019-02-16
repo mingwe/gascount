@@ -48,7 +48,7 @@ class Addevent extends Component {
                     </p>
                     <p>
                         <label>Is full?</label><br/>
-                        <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} checked='1'/>
+                        <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} defaultChecked={'1'}/>
                     </p>
                      <p><input type="submit" className={'btn btn-primary'}/></p>
                 </form>

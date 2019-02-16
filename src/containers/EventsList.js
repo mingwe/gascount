@@ -5,15 +5,27 @@ import {select} from '../actions';
 import {remove} from '../actions';
 
 class EventsList extends Component {
+
+    timeFormat (unix_tm) {
+        var dt = new Date(unix_tm*1000);
+        return (dt.getDate() + '/' + (dt.getMonth() +1) + '/' + dt.getFullYear());
+    }
+
+
+    compareDate (eventA, eventB) {
+        return eventA.date - eventB.date;
+    }
+
+
     showList () {
 
-        return this.props.mileage.map( (event) => {
+        return this.props.mileage.sort(this.compareDate).map( (event) => {
             return (
                 <tr key={event.ID}>
                     <td>{event.ID}</td>
                     <td>{event.mileage}</td>
                     <td>{event.ltrs}</td>
-                    <td>{event.date}</td>
+                    <td>{this.timeFormat(event.date)}</td>
                     <td><button onClick={() => this.props.select (event)}>details</button></td>
                     <td><button onClick={() => this.props.remove (event.ID)}>remove</button></td>
                 </tr>
