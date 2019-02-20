@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Nav from './Nav.js';
 import Mainview from './Mainview.js';
-import Addevent from '../containers/Addevent';
+import EventAddForm from '../containers/EventAddForm';
 import EventsList from '../containers/EventsList';
 import Details from '../containers/EventDetails';
 import LoadRemote from '../containers/LoadRemote';
@@ -20,7 +20,7 @@ class App extends Component {
       <div className="App">
         <Nav/>
         <Route exact path={'/'} component={Mainview}/>
-        <Route path={'/addevent'} component={Addevent}/>
+        <Route path={'/addevent'} component={EventAddForm}/>
         <Route path={'/history'} component={EventsList}/>
         <Route path={'/history'} component={Details}/>
         <Route path={'/history'} component={LoadRemote}/>

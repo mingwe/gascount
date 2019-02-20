@@ -3,7 +3,7 @@ import {bindActionCreators} from 'redux';
 import {connect} from 'react-redux';
 import {add} from '../actions';
 
-class Addevent extends Component {
+class EventAddForm extends Component {
 
     constructor(props) {
         super(props);
@@ -48,7 +48,7 @@ class Addevent extends Component {
                     </p>
                     <p>
                         <label>Is full?</label><br/>
-                        <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} defaultChecked={'1'}/>
+                        <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} defaultChecked={'true'}/>
                     </p>
                      <p><input type="submit" className={'btn btn-primary'}/></p>
                 </form>
@@ -69,4 +69,4 @@ function matchDispatchToProps (dispatch) {
     }, dispatch)
 }
 
-export default connect(mapStateToProps, matchDispatchToProps)(Addevent);
+export default connect(mapStateToProps, matchDispatchToProps)(EventAddForm);
