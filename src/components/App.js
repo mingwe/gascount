@@ -18,9 +18,9 @@ class App extends Component {
 
   render() {
     return (
-      <div className={'bg-secondary'}>
+      <div className={'bg-secondary py-5'}>
           {/*<div className="App col-xs-12 col-md-6 offset-md-3 bg-white">*/}
-          <div className="App container bg-white pt-5 mt-5">
+          <div className="App container bg-white py-5 my-5">
               <Nav/>
               <Route exact path={'/'} component={Mainview}/>
               <Route path={'/addevent'} component={EventAddForm}/>

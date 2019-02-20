@@ -33,15 +33,20 @@ class Mainview extends Component {
 
 
     render() {
-        return (
-            <div>
-                <p><small>Count from: {this.showStartMileage()}</small></p>
-                <p><small>Total mileage: {this.showTotalMileage()}</small></p>
-                <p>Total passed: {this.showPassedMileage()}</p>
-                <p>Total filled: {this.showTotalFilled()}</p>
-                <p><strong>Total consumption: {this.showConsumption()} / 100</strong></p>
-            </div>
-        );
+        if (this.props.mileage.length) {
+            return (
+                <div>
+                    <p className={'h3 my-3'}>Count from: <b>{this.showStartMileage()}</b></p>
+                    <p className={'h3 my-3'}>Total mileage: <b>{this.showTotalMileage()}</b></p>
+                    <p className={'h3 my-3'}>Total passed: <b>{this.showPassedMileage()}</b></p>
+                    <p className={'h3 my-3'}>Total filled: <b>{this.showTotalFilled()}</b></p>
+                    <p className={'h2 my-3'}><strong>Total consumption: {this.showConsumption()} / 100</strong></p>
+                </div>
+            );
+        }
+        else {
+            return <div>no data</div>
+        }
     }
 }
 
