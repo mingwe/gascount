@@ -17,7 +17,7 @@ class LoadRemote extends Component {
     render() {
         return (
             <div>
-                <button onClick={this.loadRemoteFunc.bind(this)}>update from db</button>
+                <button className={'btn btn-default'} onClick={this.loadRemoteFunc.bind(this)}>update from db</button>
             </div>
         );
     }

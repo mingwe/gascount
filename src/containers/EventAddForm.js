@@ -30,27 +30,29 @@ class EventAddForm extends Component {
 
     render() {
         return (
-            <div>
-                <form className={'form-vertical'} onSubmit={ this.handleSubmit.bind(this) }>
+            <div className={'text-center row'}>
+                <form className={'form-vertical col-xs-12 col-md-8 col-lg-4 offset-md-2 offset-lg-4'} onSubmit={ this.handleSubmit.bind(this) }>
                     <h3>new event</h3>
-                    <p>
+                    <div className="form-group">
                         <label>Mileage</label><br/>
                         <input onChange={this.handleChange} type="number" name={'mileage'} id={'mileage'} className={'form-control'} required/>
-                    </p>
-                    <p>
+                    </div>
+                    <div className="form-group">
                         <label>Date
                         </label><br/>
                         <input onChange={this.handleChange} type="date" name={'date'} id={'date'} className={'form-control'} required/>
-                    </p>
-                    <p>
+                    </div>
+                    <div className="form-group">
                         <label>Volume</label><br/>
                         <input onChange={this.handleChange} type="number" name={'volume'} id={'volume'} className={'form-control'} required/>
-                    </p>
-                    <p>
+                    </div>
+                    <div className="form-group">
                         <label>Is full?</label><br/>
                         <input onChange={this.handleChange} type="checkbox" name={'isfull'} id={'isfull'} className={'form-control'} defaultChecked={'true'}/>
-                    </p>
-                     <p><input type="submit" className={'btn btn-primary'}/></p>
+                    </div>
+                    <div className="form-group">
+                        <input type="submit" className={'btn btn-primary'}/>
+                    </div>
                 </form>
             </div>
         );
