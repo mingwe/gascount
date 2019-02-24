@@ -2,7 +2,8 @@ import * as axios  from 'axios';
 import {thunk} from 'redux-thunk';
 import {LOAD_REMOTE_SUCCESS, EVENT_ADD_SUCCESS, EVENT_ADD_FAIL, EVENT_REMOVE, EVENT_SELECTED, EVENT_REMOVE_SUCCESS, EVENT_REMOVE_FAIL} from '../constants/index';
 
-const apiUrl = 'http://localhost/fuel';
+// const apiUrl = 'http://localhost/fuel';
+const apiUrl = '//'+window.location.hostname+'/fuel';
 
 export const select = (event)=> {
     return {
