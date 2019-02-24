@@ -8,7 +8,9 @@ import Details from '../containers/EventDetails';
 import LoadRemote from '../containers/LoadRemote';
 // import Login from './Login';
 import { Router, Route } from 'react-router-dom';
+import {jQuery as $} from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap'
 
 
 // import {loadRemoteMileage} from '../actions';
