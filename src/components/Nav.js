@@ -4,9 +4,9 @@ import { NavLink } from 'react-router-dom'
 class Nav extends Component {
     render() {
         return (
-                <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <nav className="navbar navbar-expand-lg navbar-light bg-white-custom fixed-top border-bottom border-dark">
                     {/*<div className="collapse navbar-collapse" id="navbarNav">*/}
-                        <ul className="navbar-nav w-100">
+                        <ul className="navbar-nav w-100 text-uppercase letter-spacing-2">
                             <li className="nav-item col">
                                 <NavLink exact={true} activeClassName='active' className="nav-link" to='/'>main</NavLink>
                             </li>

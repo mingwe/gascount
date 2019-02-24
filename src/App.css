@@ -21,6 +21,19 @@
 .App-link {
   color: #61dafb;
 }
+.bg-white-custom {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+.bg-dark-custom {
+  background-color: rgba(52, 58, 64, 0.55);
+}
+.letter-spacing-2 {
+  letter-spacing: 5px;
+}
+
+.bg-custom-2 {
+  background-color: red;
+}
 
 @keyframes App-logo-spin {
   from {
