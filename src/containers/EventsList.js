@@ -41,11 +41,11 @@ class EventsList extends Component {
                 <table className={'w-100 table-bordered1 table table-striped table-hover'}>
                     <thead className={'thead-dark'}>
                         <tr>
-                        <th>id</th>
-                        <th>mileage</th>
-                        <th>liters</th>
-                        <th>date</th>
-                        <th colSpan={'2'}>actions</th>
+                            <th className={'font-weight-normal'}>id</th>
+                            <th className={'font-weight-normal'}>mileage</th>
+                            <th className={'font-weight-normal'}>liters</th>
+                            <th className={'font-weight-normal'}>date</th>
+                            <th className={'font-weight-normal'} colSpan={'2'}>actions</th>
                         </tr>
                     </thead>
                     <tbody>

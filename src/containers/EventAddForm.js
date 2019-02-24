@@ -36,16 +36,16 @@ class EventAddForm extends Component {
                 <div className={'text-center row'}>
                     <form className={'form-vertical col-xs-12 col-md-8 col-lg-4 offset-md-2 offset-lg-4'} onSubmit={ this.handleSubmit.bind(this) }>
                         <div className="form-group">
-                            <label className={'letter-spacing-2 text-uppercase font-weight-light'}>Mileage</label><br/>
+                            <label className={'letter-spacing-2 text-uppercase'}>Mileage</label><br/>
                             <input onChange={this.handleChange} type="number" name={'mileage'} id={'mileage'} className={'form-control'} required/>
                         </div>
                         <div className="form-group">
-                            <label className={'letter-spacing-2 text-uppercase font-weight-light'}>Date
+                            <label className={'letter-spacing-2 text-uppercase'}>Date
                             </label><br/>
                             <input onChange={this.handleChange} type="date" name={'date'} id={'date'} className={'form-control'} required/>
                         </div>
                         <div className="form-group">
-                            <label className={'letter-spacing-2 text-uppercase font-weight-light'}>Volume</label><br/>
+                            <label className={'letter-spacing-2 text-uppercase'}>Volume</label><br/>
                             <input onChange={this.handleChange} type="number" name={'volume'} id={'volume'} className={'form-control'} required/>
                         </div>
                         {/*<div className="form-group">*/}
