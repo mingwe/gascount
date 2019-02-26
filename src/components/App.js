@@ -12,8 +12,6 @@ import {jQuery as $} from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap'
 
-
-// import {loadRemoteMileage} from '../actions';
 import Background from '../bg.jpg';
 
 var sectionStyle = {
