@@ -1,19 +1,19 @@
-##G A S C O U N T
+## G A S C O U N T
 ### Development version of app
 
-######Shows fuel consumption based on user's added events
+###### Shows fuel consumption based on user's added events
 
-####Demo: http://mingwe.zzz.com.ua
+#### Demo: http://mingwe.zzz.com.ua
 
 On this stage data is not divided for many users and can be used with benefit only for one user on private server
 
-#####Main
+##### Main
 - shows totals based on history
-#####Add event
+##### Add event
 - add your fuel event to app's history. You can add event on any date, including past time
-#####History
+##### History
 - shows events history, sorted by date
-#####Login/register
+##### Login/register
 - planned to develop
 
 
