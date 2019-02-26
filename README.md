@@ -36,3 +36,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
 The build is minified and the filenames include the hashes.<br>
+
+
+### Also planned:
+- add new options such as GAS/LPG and count filled LPG separately of GAS
+- load approximate prices at event date with some api and count absolute money totals and LPG economy 
