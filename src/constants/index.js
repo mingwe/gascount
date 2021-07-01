@@ -5,3 +5,4 @@ export const LOAD_REMOTE_SUCCESS = 'LOAD_REMOTE_SUCCESS';
 export const EVENT_ADD_FAIL = 'EVENT_ADD_FAIL';
 export const EVENT_REMOVE_SUCCESS = 'EVENT_REMOVE_SUCCESS';
 export const EVENT_REMOVE_FAIL = 'EVENT_REMOVE_FAIL';
+export const APP_REL_PATH = '/gascount';

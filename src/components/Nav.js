@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
+import {APP_REL_PATH} from "../constants";
 
 class Nav extends Component {
     render() {
@@ -16,16 +17,16 @@ class Nav extends Component {
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav w-100 text-uppercase letter-spacing-2">
                         <li className="nav-item col">
-                        <NavLink exact={true} activeClassName='active' className="nav-link" to='/'>main</NavLink>
+                        <NavLink exact={true} activeClassName='active' className="nav-link" to={APP_REL_PATH + '/'}>main</NavLink>
                         </li>
                         <li className="nav-item col">
-                        <NavLink activeClassName='active' className="nav-link" to='/addevent'>add event</NavLink>
+                        <NavLink activeClassName='active' className="nav-link" to={APP_REL_PATH + '/addevent'}>add event</NavLink>
                         </li>
                         <li className="nav-item col">
-                        <NavLink activeClassName='active' className="nav-link" to='/history'>hist</NavLink>
+                        <NavLink activeClassName='active' className="nav-link" to={APP_REL_PATH + '/history'}>hist</NavLink>
                         </li>
                         <li className="nav-item col">
-                        <NavLink activeClassName='active' className="nav-link disabled" to='/login'>login</NavLink>
+                        <NavLink activeClassName='active' className="nav-link disabled" to={APP_REL_PATH + '/login'}>login</NavLink>
                         </li>
                         </ul>
                     </div>
